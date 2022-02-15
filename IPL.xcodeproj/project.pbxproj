@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		5D657E3727BBBF0500832097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E3627BBBF0500832097 /* AppDelegate.swift */; };
 		5D657E3927BBBF0500832097 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E3827BBBF0500832097 /* SceneDelegate.swift */; };
-		5D657E3B27BBBF0500832097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E3A27BBBF0500832097 /* ViewController.swift */; };
 		5D657E3E27BBBF0500832097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D657E3C27BBBF0500832097 /* Main.storyboard */; };
 		5D657E4027BBBF0800832097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D657E3F27BBBF0800832097 /* Assets.xcassets */; };
 		5D657E4327BBBF0800832097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D657E4127BBBF0800832097 /* LaunchScreen.storyboard */; };
+		5D657E4F27BBC79700832097 /* IPL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E4D27BBC79700832097 /* IPL.xcdatamodeld */; };
+		5D657E5127BC02BE00832097 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E5027BC02BE00832097 /* CoreDataManager.swift */; };
+		5D657E5327BC085E00832097 /* teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D657E5227BC085E00832097 /* teams.json */; };
+		5D657E5527BC113B00832097 /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E5427BC113B00832097 /* TeamData.swift */; };
+		5D657E5A27BC199800832097 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E5927BC199800832097 /* TeamsViewController.swift */; };
+		5D657E5C27BC1C1300832097 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E5B27BC1C1300832097 /* TeamsViewModel.swift */; };
+		5D657E6027BC257900832097 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E5E27BC257900832097 /* TeamCell.swift */; };
+		5D657E6127BC257900832097 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D657E5F27BC257900832097 /* TeamCell.xib */; };
+		5D657E6327BC332300832097 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E6227BC332300832097 /* Utils.swift */; };
+		5D657E6527BC3F9800832097 /* SimulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E6427BC3F9800832097 /* SimulateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D657E3327BBBF0500832097 /* IPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D657E3627BBBF0500832097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D657E3827BBBF0500832097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D657E3A27BBBF0500832097 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D657E3D27BBBF0500832097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D657E3F27BBBF0800832097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D657E4227BBBF0800832097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D657E4427BBBF0800832097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D657E4E27BBC79700832097 /* IPL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IPL.xcdatamodel; sourceTree = "<group>"; };
+		5D657E5027BC02BE00832097 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5D657E5227BC085E00832097 /* teams.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = teams.json; sourceTree = "<group>"; };
+		5D657E5427BC113B00832097 /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
+		5D657E5927BC199800832097 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		5D657E5B27BC1C1300832097 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		5D657E5E27BC257900832097 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		5D657E5F27BC257900832097 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		5D657E6227BC332300832097 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5D657E6427BC3F9800832097 /* SimulateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,72 @@
 		5D657E3527BBBF0500832097 /* IPL */ = {
 			isa = PBXGroup;
 			children = (
+				5D657E4A27BBC01600832097 /* Model */,
+				5D657E4B27BBC01B00832097 /* View */,
+				5D657E4C27BBC03100832097 /* ViewModel */,
 				5D657E3627BBBF0500832097 /* AppDelegate.swift */,
 				5D657E3827BBBF0500832097 /* SceneDelegate.swift */,
-				5D657E3A27BBBF0500832097 /* ViewController.swift */,
 				5D657E3C27BBBF0500832097 /* Main.storyboard */,
 				5D657E3F27BBBF0800832097 /* Assets.xcassets */,
 				5D657E4127BBBF0800832097 /* LaunchScreen.storyboard */,
 				5D657E4427BBBF0800832097 /* Info.plist */,
+				5D657E6227BC332300832097 /* Utils.swift */,
 			);
 			path = IPL;
+			sourceTree = "<group>";
+		};
+		5D657E4A27BBC01600832097 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D657E5727BC122D00832097 /* Data */,
+				5D657E4D27BBC79700832097 /* IPL.xcdatamodeld */,
+				5D657E5027BC02BE00832097 /* CoreDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D657E4B27BBC01B00832097 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D657E5D27BC255400832097 /* Cells */,
+				5D657E5827BC194F00832097 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D657E4C27BBC03100832097 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D657E5B27BC1C1300832097 /* TeamsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5D657E5727BC122D00832097 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5D657E5227BC085E00832097 /* teams.json */,
+				5D657E5427BC113B00832097 /* TeamData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5D657E5827BC194F00832097 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D657E5927BC199800832097 /* TeamsViewController.swift */,
+				5D657E6427BC3F9800832097 /* SimulateViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5D657E5D27BC255400832097 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5D657E5E27BC257900832097 /* TeamCell.swift */,
+				5D657E5F27BC257900832097 /* TeamCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D657E5327BC085E00832097 /* teams.json in Resources */,
+				5D657E6127BC257900832097 /* TeamCell.xib in Resources */,
 				5D657E4327BBBF0800832097 /* LaunchScreen.storyboard in Resources */,
 				5D657E4027BBBF0800832097 /* Assets.xcassets in Resources */,
 				5D657E3E27BBBF0500832097 /* Main.storyboard in Resources */,
@@ -137,8 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D657E3B27BBBF0500832097 /* ViewController.swift in Sources */,
+				5D657E6027BC257900832097 /* TeamCell.swift in Sources */,
 				5D657E3727BBBF0500832097 /* AppDelegate.swift in Sources */,
+				5D657E6327BC332300832097 /* Utils.swift in Sources */,
+				5D657E5C27BC1C1300832097 /* TeamsViewModel.swift in Sources */,
+				5D657E5A27BC199800832097 /* TeamsViewController.swift in Sources */,
+				5D657E4F27BBC79700832097 /* IPL.xcdatamodeld in Sources */,
+				5D657E5127BC02BE00832097 /* CoreDataManager.swift in Sources */,
+				5D657E5527BC113B00832097 /* TeamData.swift in Sources */,
+				5D657E6527BC3F9800832097 /* SimulateViewController.swift in Sources */,
 				5D657E3927BBBF0500832097 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +425,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D657E4D27BBC79700832097 /* IPL.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D657E4E27BBC79700832097 /* IPL.xcdatamodel */,
+			);
+			currentVersion = 5D657E4E27BBC79700832097 /* IPL.xcdatamodel */;
+			path = IPL.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5D657E2B27BBBF0500832097 /* Project object */;
 }

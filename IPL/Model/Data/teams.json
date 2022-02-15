@@ -1,0 +1,53 @@
+
+{
+  "teams":[
+     {
+       "teamId" : 1,
+       "teamName": "Mumbai Indians",
+       "caption": "Duniya Hila Denge",
+       "brandColor": "#004F91"
+     },
+     {
+       "teamId" : 2,
+       "teamName": "Sunrisers Hyderabad",
+       "caption": "Rise Up To Every Challenge",
+       "brandColor": "#9a1c22"
+     },
+     {
+       "teamId" : 3,
+       "teamName": "Royal Challengers \nBangalore",
+       "caption": "Play Bold",
+       "brandColor": "#d5152c"
+     },
+     {
+       "teamId" : 4,
+       "teamName": "Rajasthan Royals",
+       "caption": "Halla Bol",
+       "brandColor": "#254aa5"
+     },
+     {
+       "teamId" : 5,
+       "teamName": "Chennai Super Kings",
+       "caption": "Whistle Podu",
+       "brandColor": "#fcce06"
+     },
+     {
+       "teamId" : 6,
+       "teamName": "Kolkata Knight Riders",
+       "caption": "Korbo, Lorbo, Jeetbo Re",
+       "brandColor": "#3a225d"
+     },
+     {
+       "teamId" : 7,
+       "teamName": "Delhi Capitals",
+       "caption": "Roar Machaa",
+       "brandColor": "#2561ae"
+     },
+     {
+       "teamId" : 8,
+       "teamName": "Kings XI Punjab",
+       "caption": "Sadda Punjab",
+       "brandColor": "#ed1f27"
+     }
+  ]
+}

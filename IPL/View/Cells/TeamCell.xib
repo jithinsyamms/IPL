@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamCell" id="gTV-IL-0wX" customClass="TeamCell" customModule="IPL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="153"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="177" height="153"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-QK-9L6" userLabel="Background">
+                        <rect key="frame" x="0.0" y="0.0" width="177" height="153"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mumbai Indians Mumbai" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDG-Wa-8pG" userLabel="teamName">
+                                <rect key="frame" x="8" y="66.5" width="198" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duniya Hila Denge" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9S-Ft-w7o" userLabel="tagLine">
+                                <rect key="frame" x="8" y="89" width="118.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yDG-Wa-8pG" firstAttribute="leading" secondItem="dhl-QK-9L6" secondAttribute="leading" constant="8" id="0eJ-OM-nvI"/>
+                            <constraint firstItem="t9S-Ft-w7o" firstAttribute="top" secondItem="yDG-Wa-8pG" secondAttribute="bottom" constant="2" id="LAm-73-rTx"/>
+                            <constraint firstItem="t9S-Ft-w7o" firstAttribute="leading" secondItem="dhl-QK-9L6" secondAttribute="leading" constant="8" id="PeT-Ms-tOl"/>
+                            <constraint firstItem="yDG-Wa-8pG" firstAttribute="centerY" secondItem="dhl-QK-9L6" secondAttribute="centerY" id="Pfm-fW-yPK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dhl-QK-9L6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7M8-5d-3Kv"/>
+                <constraint firstItem="dhl-QK-9L6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8Ph-aD-fjn"/>
+                <constraint firstAttribute="trailing" secondItem="dhl-QK-9L6" secondAttribute="trailing" id="OIa-0X-Bbr"/>
+                <constraint firstAttribute="bottom" secondItem="dhl-QK-9L6" secondAttribute="bottom" id="kEF-pi-YfQ"/>
+            </constraints>
+            <size key="customSize" width="177" height="153"/>
+            <connections>
+                <outlet property="tagLine" destination="t9S-Ft-w7o" id="YHz-L1-iNf"/>
+                <outlet property="teamName" destination="yDG-Wa-8pG" id="HHc-Hs-GjS"/>
+                <outlet property="viewBackground" destination="dhl-QK-9L6" id="nAO-2g-9KF"/>
+            </connections>
+            <point key="canvasLocation" x="-238.40579710144928" y="40.513392857142854"/>
+        </collectionViewCell>
+    </objects>
+</document>
