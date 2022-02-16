@@ -10,6 +10,7 @@ import UIKit
 
 struct Utils {
     static func hexStringToUIColor (hex: String) -> UIColor {
+
         var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if cString.hasPrefix("#") {
             cString.remove(at: cString.startIndex)

@@ -22,6 +22,11 @@
 		5D657E6127BC257900832097 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D657E5F27BC257900832097 /* TeamCell.xib */; };
 		5D657E6327BC332300832097 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E6227BC332300832097 /* Utils.swift */; };
 		5D657E6527BC3F9800832097 /* SimulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657E6427BC3F9800832097 /* SimulateViewController.swift */; };
+		5D88CBB027BCD358002EC0AE /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBAF27BCD358002EC0AE /* Match.swift */; };
+		5D88CBB227BCD3FF002EC0AE /* Winners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBB127BCD3FF002EC0AE /* Winners.swift */; };
+		5D88CBB427BCDD43002EC0AE /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBB327BCDD43002EC0AE /* MatchViewModel.swift */; };
+		5D88CBB927BCE0FF002EC0AE /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBB727BCE0FF002EC0AE /* MatchCell.swift */; };
+		5D88CBBA27BCE0FF002EC0AE /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D88CBB827BCE0FF002EC0AE /* MatchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		5D657E5F27BC257900832097 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		5D657E6227BC332300832097 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5D657E6427BC3F9800832097 /* SimulateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateViewController.swift; sourceTree = "<group>"; };
+		5D88CBAF27BCD358002EC0AE /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		5D88CBB127BCD3FF002EC0AE /* Winners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winners.swift; sourceTree = "<group>"; };
+		5D88CBB327BCDD43002EC0AE /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+		5D88CBB727BCE0FF002EC0AE /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		5D88CBB827BCE0FF002EC0AE /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,8 @@
 				5D657E5727BC122D00832097 /* Data */,
 				5D657E4D27BBC79700832097 /* IPL.xcdatamodeld */,
 				5D657E5027BC02BE00832097 /* CoreDataManager.swift */,
+				5D88CBAF27BCD358002EC0AE /* Match.swift */,
+				5D88CBB127BCD3FF002EC0AE /* Winners.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				5D657E5B27BC1C1300832097 /* TeamsViewModel.swift */,
+				5D88CBB327BCDD43002EC0AE /* MatchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,6 +151,8 @@
 			children = (
 				5D657E5E27BC257900832097 /* TeamCell.swift */,
 				5D657E5F27BC257900832097 /* TeamCell.xib */,
+				5D88CBB727BCE0FF002EC0AE /* MatchCell.swift */,
+				5D88CBB827BCE0FF002EC0AE /* MatchCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -202,6 +217,7 @@
 				5D657E5327BC085E00832097 /* teams.json in Resources */,
 				5D657E6127BC257900832097 /* TeamCell.xib in Resources */,
 				5D657E4327BBBF0800832097 /* LaunchScreen.storyboard in Resources */,
+				5D88CBBA27BCE0FF002EC0AE /* MatchCell.xib in Resources */,
 				5D657E4027BBBF0800832097 /* Assets.xcassets in Resources */,
 				5D657E3E27BBBF0500832097 /* Main.storyboard in Resources */,
 			);
@@ -220,9 +236,13 @@
 				5D657E5C27BC1C1300832097 /* TeamsViewModel.swift in Sources */,
 				5D657E5A27BC199800832097 /* TeamsViewController.swift in Sources */,
 				5D657E4F27BBC79700832097 /* IPL.xcdatamodeld in Sources */,
+				5D88CBB427BCDD43002EC0AE /* MatchViewModel.swift in Sources */,
 				5D657E5127BC02BE00832097 /* CoreDataManager.swift in Sources */,
 				5D657E5527BC113B00832097 /* TeamData.swift in Sources */,
+				5D88CBB027BCD358002EC0AE /* Match.swift in Sources */,
 				5D657E6527BC3F9800832097 /* SimulateViewController.swift in Sources */,
+				5D88CBB927BCE0FF002EC0AE /* MatchCell.swift in Sources */,
+				5D88CBB227BCD3FF002EC0AE /* Winners.swift in Sources */,
 				5D657E3927BBBF0500832097 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

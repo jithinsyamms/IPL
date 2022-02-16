@@ -77,6 +77,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CTp-qZ-5Qx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UNJ-7o-zQw" id="Dad-cd-uEw"/>
+                                    <outlet property="delegate" destination="UNJ-7o-zQw" id="c9x-iy-1G0"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY6-j0-Mmo">
                                 <rect key="frame" x="157" y="836" width="100" height="45"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -97,16 +105,36 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="XY6-j0-Mmo" secondAttribute="bottom" constant="15" id="3KS-4s-EBe"/>
                             <constraint firstItem="XY6-j0-Mmo" firstAttribute="centerX" secondItem="5z9-cK-AtU" secondAttribute="centerX" id="WZq-aN-uWV"/>
+                            <constraint firstItem="XY6-j0-Mmo" firstAttribute="top" secondItem="CTp-qZ-5Qx" secondAttribute="bottom" constant="10" id="YBD-ZM-89y"/>
+                            <constraint firstItem="h2X-dD-frN" firstAttribute="trailing" secondItem="CTp-qZ-5Qx" secondAttribute="trailing" id="ajU-oa-g3I"/>
+                            <constraint firstItem="CTp-qZ-5Qx" firstAttribute="top" secondItem="h2X-dD-frN" secondAttribute="top" id="cZh-ai-WIM"/>
+                            <constraint firstItem="CTp-qZ-5Qx" firstAttribute="leading" secondItem="h2X-dD-frN" secondAttribute="leading" id="lmh-zP-QYz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gzB-kY-9pD"/>
                     <connections>
                         <outlet property="simulateButton" destination="XY6-j0-Mmo" id="96D-Pe-5bn"/>
+                        <outlet property="tableView" destination="CTp-qZ-5Qx" id="3Dd-zB-biX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qo4-H6-Vzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1498" y="1"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="scJ-E5-VKt">
+            <objects>
+                <viewController id="cI8-2l-j8q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ce9-L4-uJn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Z2c-Z7-F5J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsh-D3-cX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2319" y="22"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yKv-Hu-WXG">
