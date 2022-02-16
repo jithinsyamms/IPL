@@ -44,8 +44,18 @@ class SimulateViewController: UIViewController {
 
     
     @IBAction func simulateTapped(_ sender: Any) {
-        matchViewModel.eliminateTeams(matches: self.matches)
+        matchViewModel.playMatches(matches: self.matches)
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let tableViewHeight = self.tableView.frame.height
+        let contentHeight = self.tableView.contentSize.height
+        let centeringInset = (tableViewHeight - contentHeight) / 2
+        let topInset = max(centeringInset, 0.0)
+        self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
 }
 
 
@@ -53,6 +63,12 @@ class SimulateViewController: UIViewController {
 extension SimulateViewController : MatchViewModelDelegate {
     func setMatches(matches: [Match]) {
         self.matches = matches
+        if(matches.count == 1) {
+            simulateButton.setTitle("Simulate & End", for: .normal)
+        }
+        else {
+            simulateButton.setTitle("Simulate", for: .normal)
+        }
         tableView.reloadData()
     }
 
@@ -61,7 +77,12 @@ extension SimulateViewController : MatchViewModelDelegate {
     }
 
     func seasonFinished(winners: Winners) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let resultController = storyboard.instantiateViewController(identifier: "ResultViewController") as? ResultViewController {
+            resultController.modalPresentationStyle = .fullScreen
+            resultController.winner = winners
+            present(resultController, animated: true, completion: nil)
+        }
     }
 
 }
@@ -69,7 +90,7 @@ extension SimulateViewController : MatchViewModelDelegate {
 extension SimulateViewController : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return 100
     }
 }
 

@@ -27,6 +27,9 @@
 		5D88CBB427BCDD43002EC0AE /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBB327BCDD43002EC0AE /* MatchViewModel.swift */; };
 		5D88CBB927BCE0FF002EC0AE /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBB727BCE0FF002EC0AE /* MatchCell.swift */; };
 		5D88CBBA27BCE0FF002EC0AE /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D88CBB827BCE0FF002EC0AE /* MatchCell.xib */; };
+		5D88CBBC27BD4B6A002EC0AE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBBB27BD4B6A002EC0AE /* ResultViewController.swift */; };
+		5D88CBBF27BD73F9002EC0AE /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D88CBBD27BD73F9002EC0AE /* ResultCell.swift */; };
+		5D88CBC027BD73F9002EC0AE /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D88CBBE27BD73F9002EC0AE /* ResultCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		5D88CBB327BCDD43002EC0AE /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		5D88CBB727BCE0FF002EC0AE /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		5D88CBB827BCE0FF002EC0AE /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
+		5D88CBBB27BD4B6A002EC0AE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5D88CBBD27BD73F9002EC0AE /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		5D88CBBE27BD73F9002EC0AE /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 			children = (
 				5D657E5927BC199800832097 /* TeamsViewController.swift */,
 				5D657E6427BC3F9800832097 /* SimulateViewController.swift */,
+				5D88CBBB27BD4B6A002EC0AE /* ResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 				5D657E5F27BC257900832097 /* TeamCell.xib */,
 				5D88CBB727BCE0FF002EC0AE /* MatchCell.swift */,
 				5D88CBB827BCE0FF002EC0AE /* MatchCell.xib */,
+				5D88CBBD27BD73F9002EC0AE /* ResultCell.swift */,
+				5D88CBBE27BD73F9002EC0AE /* ResultCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 			files = (
 				5D657E5327BC085E00832097 /* teams.json in Resources */,
 				5D657E6127BC257900832097 /* TeamCell.xib in Resources */,
+				5D88CBC027BD73F9002EC0AE /* ResultCell.xib in Resources */,
 				5D657E4327BBBF0800832097 /* LaunchScreen.storyboard in Resources */,
 				5D88CBBA27BCE0FF002EC0AE /* MatchCell.xib in Resources */,
 				5D657E4027BBBF0800832097 /* Assets.xcassets in Resources */,
@@ -235,10 +245,12 @@
 				5D657E6327BC332300832097 /* Utils.swift in Sources */,
 				5D657E5C27BC1C1300832097 /* TeamsViewModel.swift in Sources */,
 				5D657E5A27BC199800832097 /* TeamsViewController.swift in Sources */,
+				5D88CBBC27BD4B6A002EC0AE /* ResultViewController.swift in Sources */,
 				5D657E4F27BBC79700832097 /* IPL.xcdatamodeld in Sources */,
 				5D88CBB427BCDD43002EC0AE /* MatchViewModel.swift in Sources */,
 				5D657E5127BC02BE00832097 /* CoreDataManager.swift in Sources */,
 				5D657E5527BC113B00832097 /* TeamData.swift in Sources */,
+				5D88CBBF27BD73F9002EC0AE /* ResultCell.swift in Sources */,
 				5D88CBB027BCD358002EC0AE /* Match.swift in Sources */,
 				5D657E6527BC3F9800832097 /* SimulateViewController.swift in Sources */,
 				5D88CBB927BCE0FF002EC0AE /* MatchCell.swift in Sources */,

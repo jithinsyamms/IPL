@@ -33,13 +33,12 @@ class MatchViewModel {
         self.delegate?.setMatches(matches: matches)
     }
 
-    func eliminateTeams(matches:[Match]?) {
+    func playMatches(matches:[Match]?) {
 
         var currentWinners:[Team] = []
         var losers:[Team] = []
 
         if let matches = matches {
-
             if matches.count == 1 {
                 setWinners(match: matches[0])
                 self.delegate?.seasonFinished(winners: seasonWinners)
@@ -48,20 +47,19 @@ class MatchViewModel {
                     let matchTuple = match.getWinner()
                     currentWinners.append(matchTuple.winner)
                     losers.append(matchTuple.loser)
-                    if matches.count == 2 && losers.count == 2{
-                        scheduleLoosersFinal(losers: losers)
+                    if matches.count == 2 && losers.count == 2 {
+                        playLoosersFinal(losers: losers)
                     }
                 }
                 self.delegate?.setTeams(teams: currentWinners)
                 prepareMatches(teams: currentWinners)
             }
         }
-
     }
 
-    func scheduleLoosersFinal(losers:[Team]){
+    func playLoosersFinal(losers:[Team]){
          let loosersFinal = Match(team: losers[0], opponent: losers[1])
-        seasonWinners.secondRunnerUp = loosersFinal.getWinner().winner
+         seasonWinners.secondRunnerUp = loosersFinal.getWinner().winner
     }
 
     func setWinners(match:Match) {

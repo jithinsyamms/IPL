@@ -41,7 +41,6 @@ class TeamsViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? SimulateViewController {
-            print("jithinsyam prepare  called in team view controller count = \(String(describing: teams?.count))")
             controller.teams = self.teams
         }
     }
@@ -51,7 +50,6 @@ class TeamsViewController: UIViewController {
 
 extension TeamsViewController: TeamsDataModelDelegate {
     func dataChanged(teams:[Team]) {
-        print("jithinsyam dataChanged called")
         self.teams = teams
     }
 }

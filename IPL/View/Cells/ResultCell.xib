@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" rowHeight="161" id="KGk-i7-Jjw" customClass="ResultCell" customModule="IPL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVy-Uf-n4g">
+                        <rect key="frame" x="5" y="15" width="346" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTH-KT-Tnv">
+                        <rect key="frame" x="15" y="46" width="326" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Iz-Tg-sKz">
+                                <rect key="frame" x="5" y="39.5" width="316" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Iz-Tg-sKz" firstAttribute="leading" secondItem="BTH-KT-Tnv" secondAttribute="leading" constant="5" id="67M-UG-bMg"/>
+                            <constraint firstAttribute="trailing" secondItem="5Iz-Tg-sKz" secondAttribute="trailing" constant="5" id="P8P-QC-7hy"/>
+                            <constraint firstAttribute="height" constant="100" id="TLg-Y4-Vgr"/>
+                            <constraint firstItem="5Iz-Tg-sKz" firstAttribute="centerY" secondItem="BTH-KT-Tnv" secondAttribute="centerY" id="okv-pY-zvU"/>
+                            <constraint firstItem="5Iz-Tg-sKz" firstAttribute="centerX" secondItem="BTH-KT-Tnv" secondAttribute="centerX" id="wBk-61-Yrp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IVy-Uf-n4g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="4hZ-O3-ksu"/>
+                    <constraint firstItem="BTH-KT-Tnv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Dgp-RT-49D"/>
+                    <constraint firstItem="BTH-KT-Tnv" firstAttribute="top" secondItem="IVy-Uf-n4g" secondAttribute="bottom" constant="10" id="GlR-ce-auu"/>
+                    <constraint firstAttribute="bottom" secondItem="BTH-KT-Tnv" secondAttribute="bottom" constant="15" id="bBE-xx-syb"/>
+                    <constraint firstItem="IVy-Uf-n4g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jDf-Ew-lUj"/>
+                    <constraint firstAttribute="trailing" secondItem="IVy-Uf-n4g" secondAttribute="trailing" constant="5" id="s0D-T8-dMN"/>
+                    <constraint firstAttribute="trailing" secondItem="BTH-KT-Tnv" secondAttribute="trailing" constant="15" id="t5S-32-9Gp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="header" destination="IVy-Uf-n4g" id="1uT-ls-b8c"/>
+                <outlet property="teamName" destination="5Iz-Tg-sKz" id="Ytj-Wx-h49"/>
+                <outlet property="viewBackGround" destination="BTH-KT-Tnv" id="q0d-HM-7Lm"/>
+            </connections>
+            <point key="canvasLocation" x="-68.115942028985515" y="108.81696428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

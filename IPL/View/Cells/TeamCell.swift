@@ -32,6 +32,7 @@ class TeamCell: UICollectionViewCell {
             viewBackground.backgroundColor = Utils.hexStringToUIColor(hex: color)
         }
 
+
     }
 
 }
