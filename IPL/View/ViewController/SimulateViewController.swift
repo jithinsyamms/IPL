@@ -50,14 +50,14 @@ class SimulateViewController: UIViewController {
         matchViewModel.playMatches(matches: self.matches)
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    func updateTableViewContentInset() {
         let tableViewHeight = self.tableView.frame.height
         let contentHeight = self.tableView.contentSize.height
         let centeringInset = (tableViewHeight - contentHeight) / 2
         let topInset = max(centeringInset, 0.0)
         self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
     }
+
 }
 
 extension SimulateViewController: MatchResultDelegate {
@@ -74,6 +74,7 @@ extension SimulateViewController: MatchResultDelegate {
 }
 
 extension SimulateViewController: MatchViewModelDelegate {
+    
     func setMatches(matches: [Match]) {
         self.matches = matches
         if matches.count == 1 {
@@ -81,7 +82,12 @@ extension SimulateViewController: MatchViewModelDelegate {
         } else {
             simulateButton.setTitle("Simulate", for: .normal)
         }
-        tableView.reloadData()
+
+        UIView.animate(withDuration: 0.0) {
+            self.tableView.reloadData()
+        } completion: { _ in
+            self.updateTableViewContentInset()
+        }
     }
 
     func setTeams(teams: [Team]) {
