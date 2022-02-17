@@ -8,11 +8,11 @@
 import Foundation
 
 struct Match {
-    var team:Team
-    var opponent:Team
+    var team: Team
+    var opponent: Team
 
-    func getWinner() -> (winner:Team, loser:Team) {
-        return Int.random(in: 1...2) == 1 ? (winner:team,loser:opponent) : (winner:opponent,loser:team)
+    func getWinner() -> (winner: Team, loser: Team) {
+        return Int.random(in: 1...2) == 1 ? (winner:team, loser:opponent) : (winner:opponent, loser:team)
     }
 
 }

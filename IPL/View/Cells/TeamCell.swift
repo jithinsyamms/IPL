@@ -10,7 +10,6 @@ import UIKit
 class TeamCell: UICollectionViewCell {
 
     @IBOutlet weak var logo: UIImageView!
-    
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var tagLine: UILabel!
@@ -20,7 +19,7 @@ class TeamCell: UICollectionViewCell {
 
     }
 
-    func setTeam(team:Team?) {
+    func setTeam(team: Team?) {
         teamName.text = team?.teamName
         tagLine.text = team?.caption
 
@@ -31,8 +30,6 @@ class TeamCell: UICollectionViewCell {
         if let team = team, let color = team.brandColor {
             viewBackground.backgroundColor = Utils.hexStringToUIColor(hex: color)
         }
-
-
     }
 
 }

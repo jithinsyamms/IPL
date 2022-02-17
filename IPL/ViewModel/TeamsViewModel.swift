@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 protocol TeamsDataModelDelegate: AnyObject {
-    func dataChanged(teams:[Team])
+    func dataChanged(teams: [Team])
 }
 
 class TeamsDataModel {
@@ -64,7 +64,7 @@ class TeamsDataModel {
             }
     }
 
-    func addTeams(teams:IPLTeams) {
+    func addTeams(teams: IPLTeams) {
         for teamFromJson in teams.teams {
             let team = Team(context: coreDataManager.getManagedContext())
             team.teamId =  Int16(teamFromJson.teamID)
@@ -76,4 +76,3 @@ class TeamsDataModel {
         coreDataManager.saveContext()
     }
 }
-

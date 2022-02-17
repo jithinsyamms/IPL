@@ -90,6 +90,7 @@
 		5D657E3527BBBF0500832097 /* IPL */ = {
 			isa = PBXGroup;
 			children = (
+				5D657E6227BC332300832097 /* Utils.swift */,
 				5D657E4A27BBC01600832097 /* Model */,
 				5D657E4B27BBC01B00832097 /* View */,
 				5D657E4C27BBC03100832097 /* ViewModel */,
@@ -99,7 +100,6 @@
 				5D657E3F27BBBF0800832097 /* Assets.xcassets */,
 				5D657E4127BBBF0800832097 /* LaunchScreen.storyboard */,
 				5D657E4427BBBF0800832097 /* Info.plist */,
-				5D657E6227BC332300832097 /* Utils.swift */,
 			);
 			path = IPL;
 			sourceTree = "<group>";

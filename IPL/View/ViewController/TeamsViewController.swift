@@ -25,9 +25,8 @@ class TeamsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 20
-        startButton.titleEdgeInsets = UIEdgeInsets(top: 0,left: 10,bottom: 0,right: 10)
+        startButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         setNavBar()
-                
         collectionView.register(UINib(nibName: "TeamCell", bundle: nil),
                                         forCellWithReuseIdentifier: "TeamCell")
         teamsDataModel.delegate = self
@@ -47,9 +46,8 @@ class TeamsViewController: UIViewController {
 
 }
 
-
 extension TeamsViewController: TeamsDataModelDelegate {
-    func dataChanged(teams:[Team]) {
+    func dataChanged(teams: [Team]) {
         self.teams = teams
     }
 }
@@ -59,7 +57,8 @@ extension TeamsViewController: UICollectionViewDataSource {
         return teams?.count ?? 0
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: "TeamCell", for: indexPath) as? TeamCell {
@@ -68,18 +67,13 @@ extension TeamsViewController: UICollectionViewDataSource {
                 }
                 return UICollectionViewCell()
     }
-
-
 }
-
 
 extension TeamsViewController: UICollectionViewDelegateFlowLayout {
 
-
-
     public func collectionView(_ collectionView: UICollectionView,
-                                   layout collectionViewLayout: UICollectionViewLayout,
-                                   sizeForItemAt indexPath: IndexPath) -> CGSize {
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize {
             let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
             let availableWidth = view.frame.width - paddingSpace
             let widthPerItem = availableWidth / itemsPerRow
@@ -95,6 +89,5 @@ extension TeamsViewController: UICollectionViewDelegateFlowLayout {
                             minimumLineSpacingForSectionAt section: Int) -> CGFloat {
             return sectionInsets.left
         }
-
 
 }

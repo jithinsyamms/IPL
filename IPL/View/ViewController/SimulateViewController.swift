@@ -12,11 +12,10 @@ class SimulateViewController: UIViewController {
     @IBOutlet weak var simulateButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
-    var initialTeams:[Team]?
-    var matches:[Match]?
-    var teams:[Team]?
+    var initialTeams: [Team]?
+    var matches: [Match]?
+    var teams: [Team]?
     var matchViewModel = MatchViewModel()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class SimulateViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
     }
-    
+
     func setNavBar() {
         navigationController?.navigationBar.barTintColor = UIColor.systemBlue
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -44,10 +43,9 @@ class SimulateViewController: UIViewController {
 
     func setButton() {
         simulateButton.layer.cornerRadius = 20
-        simulateButton.titleEdgeInsets = UIEdgeInsets(top: 0,left: 10,bottom: 0,right: 10)
+        simulateButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
-    
-    
+
     @IBAction func simulateTapped(_ sender: Any) {
         matchViewModel.playMatches(matches: self.matches)
     }
@@ -60,14 +58,13 @@ class SimulateViewController: UIViewController {
         let topInset = max(centeringInset, 0.0)
         self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
     }
-    
 }
 
-extension SimulateViewController : MatchResultDelegate {
+extension SimulateViewController: MatchResultDelegate {
 
     func restarted() {
-       teams = initialTeams
-       matchViewModel.prepareMatches(teams: teams)
+        teams = initialTeams
+        matchViewModel.prepareMatches(teams: teams)
     }
 
     func ended() {
@@ -76,14 +73,12 @@ extension SimulateViewController : MatchResultDelegate {
 
 }
 
-
-extension SimulateViewController : MatchViewModelDelegate {
+extension SimulateViewController: MatchViewModelDelegate {
     func setMatches(matches: [Match]) {
         self.matches = matches
-        if(matches.count == 1) {
+        if matches.count == 1 {
             simulateButton.setTitle("Simulate & End", for: .normal)
-        }
-        else {
+        } else {
             simulateButton.setTitle("Simulate", for: .normal)
         }
         tableView.reloadData()
@@ -96,7 +91,9 @@ extension SimulateViewController : MatchViewModelDelegate {
     func seasonFinished(winners: Winners) {
         self.teams = self.initialTeams
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let resultController = storyboard.instantiateViewController(identifier: "ResultViewController") as? ResultViewController {
+        if let resultController = storyboard.instantiateViewController(identifier:
+                                  "ResultViewController") as? ResultViewController {
+
             resultController.modalPresentationStyle = .fullScreen
             resultController.winner = winners
             resultController.delegate = self
@@ -106,22 +103,22 @@ extension SimulateViewController : MatchViewModelDelegate {
 
 }
 
-extension SimulateViewController : UITableViewDelegate {
+extension SimulateViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
 }
 
-extension SimulateViewController : UITableViewDataSource {
+extension SimulateViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matches?.count ?? 0
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as? MatchCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MatchCell",
+                      for: indexPath) as? MatchCell {
             cell.setMatch(match: matches?[indexPath.row])
             return cell
         }

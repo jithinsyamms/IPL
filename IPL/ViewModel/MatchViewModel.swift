@@ -8,22 +8,22 @@
 import Foundation
 
 protocol MatchViewModelDelegate: AnyObject {
-    func setMatches(matches:[Match])
-    func setTeams(teams:[Team])
-    func seasonFinished(winners:Winners)
+    func setMatches(matches: [Match])
+    func setTeams(teams: [Team])
+    func seasonFinished(winners: Winners)
 }
 
 class MatchViewModel {
 
     weak var delegate: MatchViewModelDelegate?
 
-    var seasonWinners:Winners = Winners()
+    var seasonWinners: Winners = Winners()
 
-    func prepareMatches(teams:[Team]?){
-        var matches:[Match] = []
+    func prepareMatches(teams: [Team]?) {
+        var matches: [Match] = []
         if var teams = teams {
             teams.shuffle()
-            var index = 0;
+            var index = 0
             while index + 1 < teams.count {
                 let match = Match(team: teams[index], opponent: teams[index + 1])
                 matches.append(match)
@@ -33,10 +33,10 @@ class MatchViewModel {
         self.delegate?.setMatches(matches: matches)
     }
 
-    func playMatches(matches:[Match]?) {
+    func playMatches(matches: [Match]?) {
 
-        var currentWinners:[Team] = []
-        var losers:[Team] = []
+        var currentWinners: [Team] = []
+        var losers: [Team] = []
 
         if let matches = matches {
             if matches.count == 1 {
@@ -57,12 +57,12 @@ class MatchViewModel {
         }
     }
 
-    func playLoosersFinal(losers:[Team]){
+    func playLoosersFinal(losers: [Team]) {
          let loosersFinal = Match(team: losers[0], opponent: losers[1])
          seasonWinners.secondRunnerUp = loosersFinal.getWinner().winner
     }
 
-    func setWinners(match:Match) {
+    func setWinners(match: Match) {
         let results = match.getWinner()
         seasonWinners.winner = results.winner
         seasonWinners.firstRunnerUp = results.loser

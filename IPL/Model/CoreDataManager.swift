@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import CoreData
 
 class CoreDataManager {
@@ -40,6 +38,4 @@ class CoreDataManager {
             print("Error \(error), \(error.userInfo)")
         }
     }
-
-    
 }

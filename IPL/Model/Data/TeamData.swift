@@ -12,7 +12,7 @@ struct IPLTeams: Codable {
 }
 
 struct IPLTeam: Codable {
-    let teamID:Int
+    let teamID: Int
     let teamName, caption, brandColor: String
 
     enum CodingKeys: String, CodingKey {

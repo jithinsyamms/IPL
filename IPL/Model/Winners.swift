@@ -8,7 +8,7 @@
 import Foundation
 
 struct Winners {
-    var winner:Team?
-    var firstRunnerUp:Team?
-    var secondRunnerUp:Team?
+    var winner: Team?
+    var firstRunnerUp: Team?
+    var secondRunnerUp: Team?
 }

@@ -13,7 +13,6 @@ class MatchCell: UITableViewCell {
     @IBOutlet weak var opponentName: UILabel!
     @IBOutlet weak var teamBackground: UIView!
     @IBOutlet weak var opponentBackground: UIView!
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +28,7 @@ class MatchCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func setMatch(match:Match?) {
+    func setMatch(match: Match?) {
         teamName.text = match?.team.teamName
         opponentName.text =  match?.opponent.teamName
         teamName.sizeToFit()
@@ -40,5 +39,5 @@ class MatchCell: UITableViewCell {
             opponentBackground.backgroundColor = Utils.hexStringToUIColor(hex: opponentColor)
         }
     }
-    
+
 }
