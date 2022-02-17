@@ -26,10 +26,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTH-KT-Tnv">
-                        <rect key="frame" x="15" y="46" width="326" height="100"/>
+                        <rect key="frame" x="30" y="46" width="296" height="100"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Iz-Tg-sKz">
-                                <rect key="frame" x="5" y="40" width="316" height="20.5"/>
+                                <rect key="frame" x="5" y="40" width="286" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,12 +47,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="IVy-Uf-n4g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="4hZ-O3-ksu"/>
-                    <constraint firstItem="BTH-KT-Tnv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Dgp-RT-49D"/>
+                    <constraint firstItem="BTH-KT-Tnv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Dgp-RT-49D"/>
                     <constraint firstItem="BTH-KT-Tnv" firstAttribute="top" secondItem="IVy-Uf-n4g" secondAttribute="bottom" constant="10" id="GlR-ce-auu"/>
                     <constraint firstAttribute="bottom" secondItem="BTH-KT-Tnv" secondAttribute="bottom" constant="15" id="bBE-xx-syb"/>
                     <constraint firstItem="IVy-Uf-n4g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jDf-Ew-lUj"/>
                     <constraint firstAttribute="trailing" secondItem="IVy-Uf-n4g" secondAttribute="trailing" constant="5" id="s0D-T8-dMN"/>
-                    <constraint firstAttribute="trailing" secondItem="BTH-KT-Tnv" secondAttribute="trailing" constant="15" id="t5S-32-9Gp"/>
+                    <constraint firstAttribute="trailing" secondItem="BTH-KT-Tnv" secondAttribute="trailing" constant="30" id="t5S-32-9Gp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
