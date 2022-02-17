@@ -39,6 +39,22 @@ class SimulateViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.systemBlue
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationItem.hidesBackButton = true
+        setNavTitle()
+    }
+
+    func setNavTitle() {
+
+        switch matches?.count {
+        case 2:
+            self.navigationItem.title = "SemiFinal"
+        case 1:
+            self.navigationItem.title = "Final"
+        default:
+            self.navigationItem.title = "KnockOut"
+        }
+
+
     }
 
     func setButton() {
@@ -74,7 +90,7 @@ extension SimulateViewController: MatchResultDelegate {
 }
 
 extension SimulateViewController: MatchViewModelDelegate {
-    
+
     func setMatches(matches: [Match]) {
         self.matches = matches
         if matches.count == 1 {
@@ -87,6 +103,7 @@ extension SimulateViewController: MatchViewModelDelegate {
             self.tableView.reloadData()
         } completion: { _ in
             self.updateTableViewContentInset()
+            self.setNavTitle()
         }
     }
 
