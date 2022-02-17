@@ -7,17 +7,32 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+protocol MatchResultDelegate :AnyObject{
+   func restarted()
+   func ended()
+}
 
+
+class ResultViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var endButton: UIButton!
+
     var winner:Winners!
+    weak var delegate:MatchResultDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
+        setButtons()
+
+    }
+    func setButtons() {
         restartButton.layer.cornerRadius = 20
         restartButton.titleEdgeInsets = UIEdgeInsets(top: 0,left: 10,bottom: 0,right: 10)
+        endButton.layer.cornerRadius = 20
+        endButton.titleEdgeInsets = UIEdgeInsets(top: 0,left: 10,bottom: 0,right: 10)
     }
 
     func setTableView() {
@@ -27,6 +42,17 @@ class ResultViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
     }
+
+    @IBAction func restartMatch(_ sender: Any) {
+        self.delegate?.restarted()
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func endMatch(_ sender: Any) {
+        self.delegate?.ended()
+        self.dismiss(animated: true, completion: nil)
+    }
+
     
 }
 

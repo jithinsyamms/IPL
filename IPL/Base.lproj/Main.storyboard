@@ -138,31 +138,53 @@
                                     <outlet property="delegate" destination="cI8-2l-j8q" id="sOx-9y-FQ4"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSk-T5-Vfi">
-                                <rect key="frame" x="137" y="797" width="140" height="50"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ibC-oq-xnt"/>
-                                    <constraint firstAttribute="height" constant="50" id="ueS-le-FWy"/>
-                                </constraints>
-                                <state key="normal" title="Restart">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kQ8-uT-gPe">
+                                <rect key="frame" x="62" y="797" width="290" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSk-T5-Vfi">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ueS-le-FWy"/>
+                                        </constraints>
+                                        <state key="normal" title="Restart">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="restartMatch:" destination="cI8-2l-j8q" eventType="touchUpInside" id="fVC-mt-hbn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cj6-gn-w7d">
+                                        <rect key="frame" x="150" y="0.0" width="140" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8lJ-oT-4GM"/>
+                                        </constraints>
+                                        <state key="normal" title="End">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endMatch:" destination="cI8-2l-j8q" eventType="touchUpInside" id="dW4-lQ-FDV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z2c-Z7-F5J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vSk-T5-Vfi" firstAttribute="top" secondItem="hvK-Sv-gKi" secondAttribute="bottom" constant="5" id="088-FB-eb5"/>
                             <constraint firstItem="hvK-Sv-gKi" firstAttribute="top" secondItem="Z2c-Z7-F5J" secondAttribute="top" id="18Y-2R-mP1"/>
+                            <constraint firstItem="kQ8-uT-gPe" firstAttribute="centerX" secondItem="Ce9-L4-uJn" secondAttribute="centerX" id="1Oc-qi-Av5"/>
                             <constraint firstItem="hvK-Sv-gKi" firstAttribute="leading" secondItem="Z2c-Z7-F5J" secondAttribute="leading" id="AFK-Rb-eVb"/>
-                            <constraint firstItem="Z2c-Z7-F5J" firstAttribute="bottom" secondItem="vSk-T5-Vfi" secondAttribute="bottom" constant="15" id="RAH-F7-XUd"/>
-                            <constraint firstItem="vSk-T5-Vfi" firstAttribute="centerX" secondItem="Ce9-L4-uJn" secondAttribute="centerX" id="q2z-hV-bJ3"/>
+                            <constraint firstItem="Z2c-Z7-F5J" firstAttribute="bottom" secondItem="kQ8-uT-gPe" secondAttribute="bottom" constant="15" id="SRF-o2-FTi"/>
+                            <constraint firstItem="kQ8-uT-gPe" firstAttribute="width" secondItem="Ce9-L4-uJn" secondAttribute="width" multiplier="0.7" id="fs4-dS-Mvi"/>
                             <constraint firstItem="Z2c-Z7-F5J" firstAttribute="trailing" secondItem="hvK-Sv-gKi" secondAttribute="trailing" id="vZ4-4W-AkG"/>
+                            <constraint firstItem="kQ8-uT-gPe" firstAttribute="top" secondItem="hvK-Sv-gKi" secondAttribute="bottom" constant="5" id="wpW-Ss-xkX"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="restartButton" destination="vSk-T5-Vfi" id="Dzu-VT-aSm"/>
+                        <outlet property="endButton" destination="cj6-gn-w7d" id="VX0-K4-j0r"/>
+                        <outlet property="restartButton" destination="vSk-T5-Vfi" id="Bsy-0I-njh"/>
                         <outlet property="tableView" destination="hvK-Sv-gKi" id="0lZ-si-NDT"/>
                     </connections>
                 </viewController>

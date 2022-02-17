@@ -12,6 +12,7 @@ class SimulateViewController: UIViewController {
     @IBOutlet weak var simulateButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
+    var initialTeams:[Team]?
     var matches:[Match]?
     var teams:[Team]?
     var matchViewModel = MatchViewModel()
@@ -19,12 +20,12 @@ class SimulateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTableView()
-        matchViewModel.delegate = self
-        simulateButton.layer.cornerRadius = 20
-        simulateButton.titleEdgeInsets = UIEdgeInsets(top: 0,left: 10,bottom: 0,right: 10)
-        matchViewModel.prepareMatches(teams: teams)
         setNavBar()
+        setTableView()
+        setButton()
+        initialTeams = teams
+        matchViewModel.delegate = self
+        matchViewModel.prepareMatches(teams: teams)
     }
 
     func setTableView() {
@@ -40,8 +41,12 @@ class SimulateViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
     }
-    
 
+    func setButton() {
+        simulateButton.layer.cornerRadius = 20
+        simulateButton.titleEdgeInsets = UIEdgeInsets(top: 0,left: 10,bottom: 0,right: 10)
+    }
+    
     
     @IBAction func simulateTapped(_ sender: Any) {
         matchViewModel.playMatches(matches: self.matches)
@@ -58,6 +63,18 @@ class SimulateViewController: UIViewController {
     
 }
 
+extension SimulateViewController : MatchResultDelegate {
+
+    func restarted() {
+       teams = initialTeams
+       matchViewModel.prepareMatches(teams: teams)
+    }
+
+    func ended() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+
+}
 
 
 extension SimulateViewController : MatchViewModelDelegate {
@@ -77,10 +94,12 @@ extension SimulateViewController : MatchViewModelDelegate {
     }
 
     func seasonFinished(winners: Winners) {
+        self.teams = self.initialTeams
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let resultController = storyboard.instantiateViewController(identifier: "ResultViewController") as? ResultViewController {
             resultController.modalPresentationStyle = .fullScreen
             resultController.winner = winners
+            resultController.delegate = self
             present(resultController, animated: true, completion: nil)
         }
     }
@@ -90,14 +109,13 @@ extension SimulateViewController : MatchViewModelDelegate {
 extension SimulateViewController : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 120
     }
 }
 
 extension SimulateViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return matches?.count ?? 0
     }
 
