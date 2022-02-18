@@ -90,11 +90,11 @@
 		5D657E3527BBBF0500832097 /* IPL */ = {
 			isa = PBXGroup;
 			children = (
-				5D657E6227BC332300832097 /* Utils.swift */,
 				5D657E4A27BBC01600832097 /* Model */,
 				5D657E4B27BBC01B00832097 /* View */,
 				5D657E4C27BBC03100832097 /* ViewModel */,
 				5D657E3627BBBF0500832097 /* AppDelegate.swift */,
+				5D657E6227BC332300832097 /* Utils.swift */,
 				5D657E3827BBBF0500832097 /* SceneDelegate.swift */,
 				5D657E3C27BBBF0500832097 /* Main.storyboard */,
 				5D657E3F27BBBF0800832097 /* Assets.xcassets */,

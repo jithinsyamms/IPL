@@ -25,6 +25,8 @@ class CoreDataManager {
         return storeContainer
     }()
 
+
+
     func getManagedContext() -> NSManagedObjectContext {
         return storeContainer.viewContext
     }

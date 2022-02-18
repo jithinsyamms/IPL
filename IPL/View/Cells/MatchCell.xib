@@ -23,10 +23,10 @@
                         <rect key="frame" x="15" y="0.0" width="568" height="244"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-d0-FF1">
-                                <rect key="frame" x="0.0" y="67" width="255.5" height="110"/>
+                                <rect key="frame" x="0.0" y="72" width="255.5" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPx-fw-Q6c">
-                                        <rect key="frame" x="5" y="20" width="245.5" height="70"/>
+                                        <rect key="frame" x="5" y="20" width="245.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="VPx-fw-Q6c" secondAttribute="trailing" constant="5" id="9zE-MA-PIl"/>
                                     <constraint firstAttribute="bottom" secondItem="VPx-fw-Q6c" secondAttribute="bottom" constant="20" id="ARo-NT-a32"/>
-                                    <constraint firstAttribute="height" constant="110" id="FaT-hL-Kb8"/>
+                                    <constraint firstAttribute="height" constant="100" id="FaT-hL-Kb8"/>
                                     <constraint firstItem="VPx-fw-Q6c" firstAttribute="leading" secondItem="Ufb-d0-FF1" secondAttribute="leading" constant="5" id="Ngk-pm-75B"/>
                                     <constraint firstItem="VPx-fw-Q6c" firstAttribute="top" secondItem="Ufb-d0-FF1" secondAttribute="top" constant="20" id="lyD-yC-PKL"/>
                                 </constraints>
@@ -48,10 +48,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF0-qf-k6Z">
-                                <rect key="frame" x="312.5" y="67" width="255.5" height="110"/>
+                                <rect key="frame" x="312.5" y="72" width="255.5" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSF-T7-Hfw">
-                                        <rect key="frame" x="5" y="20" width="245.5" height="70"/>
+                                        <rect key="frame" x="5" y="20" width="245.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

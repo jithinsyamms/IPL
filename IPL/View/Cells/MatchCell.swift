@@ -31,8 +31,7 @@ class MatchCell: UITableViewCell {
     func setMatch(match: Match?) {
         teamName.text = match?.team.teamName
         opponentName.text =  match?.opponent.teamName
-        teamName.sizeToFit()
-        opponentName.sizeToFit()
+        
 
         if let match = match, let teamColor = match.team.brandColor, let opponentColor = match.opponent.brandColor {
             teamBackground.backgroundColor = Utils.hexStringToUIColor(hex: teamColor)

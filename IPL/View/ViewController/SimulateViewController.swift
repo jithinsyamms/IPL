@@ -47,11 +47,11 @@ class SimulateViewController: UIViewController {
 
         switch matches?.count {
         case 2:
-            self.navigationItem.title = "SemiFinal"
+            self.navigationItem.title = "SEMI-FINAL"
         case 1:
-            self.navigationItem.title = "Final"
+            self.navigationItem.title = "FINAL"
         default:
-            self.navigationItem.title = "KnockOut"
+            self.navigationItem.title = "KNOCK OUT"
         }
 
 

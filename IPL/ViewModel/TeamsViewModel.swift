@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 protocol TeamsDataModelDelegate: AnyObject {
-    func dataChanged(teams: [Team])
+    func setTeams(teams: [Team])
 }
 
 class TeamsDataModel {
@@ -33,7 +33,7 @@ class TeamsDataModel {
             do {
                 teams = try coreDataManager.getManagedContext().fetch(fetchRequest)
                 if let teams = teams {
-                    delegate?.dataChanged(teams: teams)
+                    delegate?.setTeams(teams: teams)
                 }
             } catch let error {
                 print(error)

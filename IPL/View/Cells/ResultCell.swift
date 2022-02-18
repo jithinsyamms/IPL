@@ -34,33 +34,35 @@ class ResultCell: UITableViewCell {
         case 0:
             header.text = "Winners"
             header.font = UIFont.systemFont(ofSize: 30)
-            if let color = winner.winner?.brandColor {
-                viewBackGround.backgroundColor = Utils.hexStringToUIColor(hex: color )
-            }
-            if let name = winner.winner?.teamName {
-                teamName.text = name
-            }
+            setBackgroundColor(team: winner.winner )
+            setTextColor(team: winner.winner)
 
         case 1:
             header.text = "Runner Up"
             header.font = UIFont.systemFont(ofSize: 26)
-            if let color = winner.firstRunnerUp?.brandColor {
-                viewBackGround.backgroundColor = Utils.hexStringToUIColor(hex: color )
-            }
-            if let name = winner.firstRunnerUp?.teamName {
-                teamName.text = name
-            }
+            setBackgroundColor(team: winner.firstRunnerUp)
+            setTextColor(team: winner.firstRunnerUp)
+
         case 2:
             header.font = UIFont.systemFont(ofSize: 22)
             header.text = "2nd Runner Up"
-            if let color = winner.secondRunnerUp?.brandColor {
-                viewBackGround.backgroundColor = Utils.hexStringToUIColor(hex: color )
-            }
-            if let name = winner.secondRunnerUp?.teamName {
-                teamName.text = name
-            }
+            setBackgroundColor(team: winner.secondRunnerUp)
+            setTextColor(team: winner.secondRunnerUp)
+
         default:
             header.text = ""
+        }
+    }
+
+    func setBackgroundColor (team: Team?) {
+        if let color = team?.brandColor {
+            viewBackGround.backgroundColor = Utils.hexStringToUIColor(hex: color )
+        }
+    }
+
+    func setTextColor (team: Team?) {
+        if let name = team?.teamName {
+            teamName.text = name
         }
     }
 }

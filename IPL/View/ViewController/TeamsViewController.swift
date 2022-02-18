@@ -10,7 +10,6 @@ import UIKit
 class TeamsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-
     @IBOutlet weak var startButton: UIButton!
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(
@@ -24,13 +23,17 @@ class TeamsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.layer.cornerRadius = 20
-        startButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        setButton()
         setNavBar()
         collectionView.register(UINib(nibName: "TeamCell", bundle: nil),
                                         forCellWithReuseIdentifier: "TeamCell")
         teamsDataModel.delegate = self
         teamsDataModel.fetchTeams()
+    }
+
+    func setButton() {
+        startButton.layer.cornerRadius = 20
+        startButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
 
     func setNavBar() {
@@ -47,7 +50,7 @@ class TeamsViewController: UIViewController {
 }
 
 extension TeamsViewController: TeamsDataModelDelegate {
-    func dataChanged(teams: [Team]) {
+    func setTeams(teams: [Team]) {
         self.teams = teams
     }
 }
